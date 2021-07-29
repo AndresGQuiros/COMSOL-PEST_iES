@@ -1,4 +1,4 @@
-###The files in this repository are ready for calibration of hydrogeophysical model developed in COMSOL using PEST and PEST++.
+### The files in this repository are ready for calibration of hydrogeophysical model developed in COMSOL using PEST and PEST++.
 The examples in this folder are ready to run the iterative Ensemble Smoother with an example shown in the manuscript.
 Some modifications in the .pst file would be necessary to run PEST in GLM mode.
 
