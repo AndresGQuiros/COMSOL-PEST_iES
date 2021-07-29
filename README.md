@@ -10,7 +10,7 @@ Licensing for COMSOL, LiveLink for Matlab and MATLAB are required.
 
 An example of the forward hydrogeophysical model is in the file .mph.
 
-MATLAB Version 2018a was used in this work. To modify MATLAB version change "C:\Program Files\Matlab_R2018a\bin\matlab.exe" for the relevant version in the ProgramInversion.bat file. The archive Run_Inversion.m is used to communicate with COMSOL and to postprocess the results.
+MATLAB Version 2018a was used in this work. To modify MATLAB version change "C:\Program Files\Matlab_R2018a\bin\matlab.exe" for the relevant version in the ProgramInversion.bat file. The archive Run_Inversion.m is used to communicate with COMSOL and to postprocess the results. FAC2G PEST funcionality must be included in folder or added to the system path.
 
 ## Prepare some files
 
