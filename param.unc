@@ -1,0 +1,6 @@
+START COVARIANCE_MATRIX
+	file ppcov.mat
+	variance_multiplier 1.0
+	first_parameter ppt1
+	last_parameter ppt4650
+END COVARIANCE_MATRIX
