@@ -5513,7 +5513,7 @@ TDS12	3.609753982	5.540543788	TDS
 ProgramInversion.bat
 * model input/output
 PP.tpl  PP.pts
-OUT.ins outERT.txt
+outERT.ins outERT.txt
 outTDS.ins  out_TDS_well.txt
 ++ overdue_resched_fac(2)
 ++ overdue_giveup_fac(5)
