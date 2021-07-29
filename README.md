@@ -12,6 +12,14 @@ An example of the forward hydrogeophysical model is in the file .mph.
 
 MATLAB Version 2018a was used in this work. To modify MATLAB version change "C:\Program Files\Matlab_R2018a\bin\matlab.exe" for the relevant version in the ProgramInversion.bat file. The archive Run_Inversion.m is used to communicate with COMSOL and to postprocess the results.
 
+## Prepare some files
+
+factors.dat and ppcov.mat files are necessary to run the inversion with pilot points (but are not included here because of its size >200 mb).
+
+PPK2FAC and PPCOV funcionalities from the PEST GWutils suite are necessary. 
+Run these applications before running the inversion using the relevant pilot point and structure files provided in this folder.
+
+
 ## Run the inversion
 To launch the inversion first the comsol server must be initiated. 
 
