@@ -1,6 +1,6 @@
 ### Calibration of hydrogeophysical models developed in COMSOL using PEST and PEST++ via MATLAB.
 The examples in this folder are ready to run the iterative Ensemble Smoother with an example shown in the manuscript.
-Some modifications in the .pst file would be necessary to run PEST in GLM mode.
+Some modifications in the .pst file are necessary to run PEST in GLM mode.
 
 ## Licensing
 PEST (Doherty, 2020) is freely available in its dedicated webpage https://pesthomepage.org/.
