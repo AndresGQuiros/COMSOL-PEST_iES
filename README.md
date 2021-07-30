@@ -16,11 +16,11 @@ MATLAB Version 2018a was used in this work. To modify MATLAB version change "C:\
 
 factors.dat and ppcov.mat files are necessary to run the inversion with pilot points (but are not included here because of its size >200 mb).
 
-PPK2FACG and PPCOV funcionalities from the PEST GWutils suite are necessary. Run these applications before running the inversion using the relevant pilot point and structure files provided in this folder.
+**PPK2FACG** and **PPCOV** funcionalities from the PEST GWutils suite are necessary. Run these applications before running the inversion using the relevant pilot point and structure files provided in this folder.
 
-Run PPK2FACG to compute the kriging factors using the PP.pts file, the zone.xyz nodal file and the struct.dat structure file provided. See p. 191 of the PEST GW data utilities Part B document. Name factors.dat as interpolation factors file. These will be used by the FAC2G utility during the inversion and the details are in the fac2g.in file.
+Run **PPK2FACG** to compute the kriging factors using the PP.pts file, the zone.xyz nodal file and the struct.dat structure file provided. See p. 191 of the PEST GW data utilities Part B document. Name factors.dat as interpolation factors file. These will be used by the FAC2G utility during the inversion and the details are in the fac2g.in file.
 
-To generate a covariance file that pestpp-ies will use run PPCOV. See p. 191 of the PEST GW data utilities Part B document. Use as name ppcov.mat that is included in the param.unc file and then used in the PEST control file for the ies [++ parcov(param.unc)].
+A covariance file is required by pestpp-ies. To generate the covariance matrix with the structure file provided it is necessary to run **PPCOV**. See p. 191 of the PEST GW data utilities Part B document. Use as output name ppcov.mat. This will be used in the param.unc file and then added to the PEST control file options [++ parcov(param.unc)].
 
 
 ## Run the inversion
@@ -39,8 +39,12 @@ To run the iterative Ensemble Smoother with PEST++ from the working folder run
 ```
 pestpp-ies inv_pcf.pst
 ```
-To run PEST in GLM mode equivalent workflow is used using instead:
+
+
+-------------------------------------------------------------------------------
+
+To run PEST in GLM mode  use instead but note that different options in the pest control file are necessary (see the PEST manual).
 ```
 pest inv_pcf.pst
 ```
-If the .exe files are not in the working folder they must be added to the System Path as explained in PEST/PEST++ manuals.
+The .exe files necessary to run this example are provided. If they are not in the working folder they must be added to the System Path as explained in PEST/PEST++ manuals.
