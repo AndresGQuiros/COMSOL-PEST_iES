@@ -16,8 +16,9 @@ MATLAB Version 2018a was used in this work. To modify MATLAB version change "C:\
 
 factors.dat and ppcov.mat files are necessary to run the inversion with pilot points (but are not included here because of its size >200 mb).
 
-PPK2FAC and PPCOV funcionalities from the PEST GWutils suite are necessary. 
-Run these applications before running the inversion using the relevant pilot point and structure files provided in this folder.
+PPK2FACG and PPCOV funcionalities from the PEST GWutils suite are necessary. Run these applications before running the inversion using the relevant pilot point and structure files provided in this folder.
+Run PPK2FACG to compute the kriging factors using the PP.pts file, the zone.xyz nodal file and the struct.dat structure file provided. See p. 191 of the PEST GW data utilities Part B document. Name factors.dat as interpolation factors file. These will be used by the FAC2G utility during the inversion and the details are in the fac2g.in file.
+To generate a covariance file that pestpp-ies will use run PPCOV. See p. 191 of the PEST GW data utilities Part B document. Use as name ppcov.mat that is included in the param.unc file and then used in the PEST control file for the ies [++ parcov(param.unc)].
 
 
 ## Run the inversion
