@@ -5522,7 +5522,5 @@ outTDS.ins  out_TDS_well.txt
 ++ parcov(param.unc)
 ++ ies_subset_size(3)
 ++ lambda_scale_fac(1.0)
-++ ies_restart_observation_ensemble(inv_pcf.0.obs.csv)
-++ ies_parameter_ensemble(inv_pcf.0.par.csv)
 
 
