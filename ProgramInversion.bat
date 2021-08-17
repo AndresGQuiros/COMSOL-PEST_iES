@@ -15,4 +15,4 @@ Rem ###################################
 Rem Start MATLAB and runs COMSOL (modify MATLAB path if necessary).
 Rem ###################################
 
-"C:\Program Files\Matlab_R2018a\bin\matlab.exe" -nodesktop -nosplash -wait -r Run_Coupled_FWD
+"C:\Program Files\Matlab_R2018a\bin\matlab.exe" -nodesktop -nosplash -minimize -wait -r Run_Coupled_FWD
