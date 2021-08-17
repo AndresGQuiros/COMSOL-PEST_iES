@@ -34,7 +34,6 @@ Navigate to "C:\Program Files\COMSOL\COMSOL54\Multiphysics\bin\win64" (or the eq
 ```
 comsolmphserver -multi on
 ```
-For parallel computing several servers must be open. 
 
 The port for comsol connection is in the first line of the *Run_Coupled_FWD.m* file. Default is usually 2036. If open another port the first line must be modified  
 
@@ -42,7 +41,9 @@ The port for comsol connection is in the first line of the *Run_Coupled_FWD.m* f
 mphstart(2036)
 ```
 
-For parallelization each subfolder will require a different *Run_Coupled_FWD.m* file with a differnt port number in the first line (or a try/catch command with multiple ports).
+
+
+
 
 
 ### RUN PEST++
@@ -54,6 +55,29 @@ pestpp-ies inv_pcf.pst
 
 The .exe files necessary to run this example are provided. If they are not in the working folder they must be added to the System Path as explained in PEST/PEST++ manuals.
 
+
+
+### Parallelization
+
+Create subfolders (agents) with the relevant files copied in them.
+
+For parallelization several COMSOL servers must be open and each subfolder will require the *Run_Coupled_FWD.m* file with the relevant port number in the first line (or a try/catch command with multiple ports).
+
+Check your hostname in the CMD.
+```
+>hostname
+#YOUR_HOST_NAME#
+```
+
+In the main folder launch the master
+```
+pestpp-ies inv_pcf.pst /h :4004
+```
+
+From each subfolder launch the agents
+```
+pestpp-ies inv_pcf.pst /h #YOUR_HOST_NAME#:4004
+```
 
 
 ## CONTACT
