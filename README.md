@@ -20,11 +20,11 @@ MATLAB Version 2018a was used in this work. To work with other MATLAB version ch
 
 *factors.dat* and *ppcov.mat* files are necessary to run the inversion with pilot points (but are not included here because of its size >200 mb).
 
-**PPK2FACG** and **PPCOV** funcionalities from the PEST GWutils suite are necessary. Run these applications before running the inversion using the relevant pilot point and structure files provided in this folder.
+**PPK2FACG** and **PPCOV** funcionalities (included in this repository) from the PEST GWutils suite are necessary. Run these applications before running the inversion using the relevant pilot point and structure files provided in this folder.
 
-Run **PPK2FACG** to compute the kriging factors using the PP.pts file, the zone.xyz nodal file and the struct.dat structure file provided. See p. 191 of the PEST GW data utilities Part B document. Name *factors.dat* as interpolation factors file. These will be used by the FAC2G utility during the inversion and the details are in the *fac2g.in* file.
+Run **PPK2FACG** to compute the kriging factors using the *PP.pts* file, the *zone.xyz* nodal file and the *struct.dat* structure file provided. See p. 191 of the PEST GW data utilities Part B document. Name *factors.dat* as interpolation factors file. These will be used by the **FAC2G** utility during the inversion and the details are in the *fac2g.in* file.
 
-A covariance file is required by pestpp-ies. To generate the covariance matrix with the structure file provided it is necessary to run **PPCOV**. See p. 191 of the PEST GW data utilities Part B document. Use as output name ppcov.mat. This will be used in the param.unc file and then added to the PEST control file options [++ parcov(param.unc)].
+A covariance file is required by pestpp-ies. To generate the covariance matrix with the structure file provided it is necessary to run **PPCOV**. See p. 191 of the PEST GW data utilities Part B document. Use as output name *ppcov.mat*. This will be used in the *param.unc* file and then added to the PEST control file options [++ parcov(param.unc)].
 
 
 
