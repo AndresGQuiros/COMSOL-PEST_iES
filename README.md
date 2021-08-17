@@ -56,6 +56,6 @@ The .exe files necessary to run this example are provided. If they are not in th
 
 If you find any problems with the files or need any clarification contact 
 
-***andres.quiros@abdn.ac.uk ***
+andres.quiros@abdn.ac.uk 
 or 
-***andresgquiros@gmail.com***
+andresgquiros@gmail.com
