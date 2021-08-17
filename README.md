@@ -26,6 +26,8 @@ A covariance file is required by pestpp-ies. To generate the covariance matrix w
 
 
 ## Run PEST with COMSOL
+
+### Initialise the COMSOL server
 To launch the process first the comsol server must be initiated. 
 
 Navigate to "C:\Program Files\COMSOL\COMSOL54\Multiphysics\bin\win64" (or the equivalent folder for your COMSOL version) and run
@@ -34,21 +36,22 @@ comsolmphserver -multi on
 ```
 For parallel computing several servers must be open. 
 
-The port for comsol connection is in the first line of the Run_Inversion.m file. Default is usually 2036. If open another port the first line [mphstart(2036)] of the *Run_Coupled_FWD.m* file must be changed  
-For parallel each subfolder will require a different *Run_Coupled_FWD.m* file with a differnt port number in the first line (or a try/catch command with multiple ports).
+The port for comsol connection is in the first line of the *Run_Coupled_FWD.m* file. Default is usually 2036. If open another port the first line must be modified  
 
-To run the iterative Ensemble Smoother with PEST++ from the working folder run
+```
+mphstart(2036)
+```
+
+For parallelization each subfolder will require a different *Run_Coupled_FWD.m* file with a differnt port number in the first line (or a try/catch command with multiple ports).
+
+
+### RUN PEST++
+
+Finally, to run the iterative Ensemble Smoother with PEST++ from the working folder run
 ```
 pestpp-ies inv_pcf.pst
 ```
 
-
--------------------------------------------------------------------------------
-
-To run PEST in GLM mode  use instead but note that different options in the pest control file are necessary (see the PEST manual).
-```
-pest inv_pcf.pst
-```
 The .exe files necessary to run this example are provided. If they are not in the working folder they must be added to the System Path as explained in PEST/PEST++ manuals.
 
 
@@ -60,3 +63,14 @@ If you find any problems with the files or need any clarification contact
 andres.quiros@abdn.ac.uk 
 or 
 andresgquiros@gmail.com
+
+
+
+
+-------------------------------------------------------------------------------
+
+To run PEST in GLM mode use instead 
+```
+pest inv_pcf.pst
+```
+but note that different options in the pest control file are necessary (see the PEST manual).
