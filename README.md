@@ -1,7 +1,8 @@
-### Calibration of hydrogeophysical models developed in COMSOL using PEST and PEST++ via MATLAB.
+# Calibration of hydrogeophysical models developed in COMSOL using PEST++ via MATLAB.
 The examples in this folder are ready to run the iterative Ensemble Smoother with an example shown in the manuscript.
 
 COMSOL 5.4 (or higher) and MATLAB with appropriate licensing are required (see below).
+
 
 ## Licensing
 **PEST** (Doherty, 2020) is freely available in its dedicated webpage https://pesthomepage.org/.
@@ -14,6 +15,7 @@ An example of the forward hydrogeophysical model with the necessary input and ou
 MATLAB Version 2018a was used in this work. To work with other MATLAB version change "C:\Program Files\Matlab_R2018a\bin\matlab.exe" for the relevant version in the *ProgramInversion.bat* file. The archive *Run_Coupled_FWD.m* is used to communicate with COMSOL, run the forward model, postprocess the results and extract the relevant files required by PEST++.  
 
 
+
 ## Prepare some files
 
 *factors.dat* and *ppcov.mat* files are necessary to run the inversion with pilot points (but are not included here because of its size >200 mb).
@@ -23,6 +25,7 @@ MATLAB Version 2018a was used in this work. To work with other MATLAB version ch
 Run **PPK2FACG** to compute the kriging factors using the PP.pts file, the zone.xyz nodal file and the struct.dat structure file provided. See p. 191 of the PEST GW data utilities Part B document. Name *factors.dat* as interpolation factors file. These will be used by the FAC2G utility during the inversion and the details are in the *fac2g.in* file.
 
 A covariance file is required by pestpp-ies. To generate the covariance matrix with the structure file provided it is necessary to run **PPCOV**. See p. 191 of the PEST GW data utilities Part B document. Use as output name ppcov.mat. This will be used in the param.unc file and then added to the PEST control file options [++ parcov(param.unc)].
+
 
 
 ## Run PEST with COMSOL
@@ -42,10 +45,6 @@ mphstart(2036)
 ```
 
 
-
-
-
-
 ### RUN PEST++
 
 Finally, to run the iterative Ensemble Smoother with PEST++ from the working folder run
@@ -54,7 +53,6 @@ pestpp-ies inv_pcf.pst
 ```
 
 The .exe files necessary to run this example are provided. If they are not in the working folder they must be added to the System Path as explained in PEST/PEST++ manuals.
-
 
 
 ### Parallelization
@@ -80,14 +78,13 @@ pestpp-ies inv_pcf.pst /h #YOUR_HOST_NAME#:4004
 ```
 
 
-## CONTACT
+# CONTACT
 
 If you find any problems with the files or need any clarification contact 
 
 andres.quiros@abdn.ac.uk 
 or 
 andresgquiros@gmail.com
-
 
 
 
