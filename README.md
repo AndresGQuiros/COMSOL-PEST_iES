@@ -1,7 +1,7 @@
 ### Calibration of hydrogeophysical models developed in COMSOL using PEST and PEST++ via MATLAB.
 The examples in this folder are ready to run the iterative Ensemble Smoother with an example shown in the manuscript.
 
-COMSOL 5.4 or higher with appropriate licensing is required (see below).
+COMSOL 5.4 (or higher) and MATLAB with appropriate licensing are required (see below).
 
 ## Licensing
 PEST (Doherty, 2020) is freely available in its dedicated webpage https://pesthomepage.org/.
