@@ -1,4 +1,10 @@
 # Calibration of hydrogeophysical models developed in COMSOL using PEST++ via MATLAB.
+
+AndrésGonzález-Quirós & Jean-ChristopheComte
+Hydrogeophysical model calibration and uncertainty analysis via full integration of PEST/PEST++ and COMSOL
+Environmental Modelling & Software, 105183
+https://doi.org/10.1016/j.envsoft.2021.105183
+
 The examples in this folder are ready to run the iterative Ensemble Smoother with an example shown in the manuscript.
 
 COMSOL 5.4 (or higher) and MATLAB with appropriate licensing are required (see below).
